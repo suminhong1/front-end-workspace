@@ -2,6 +2,10 @@
 
 - [선택자](#선택자)
 - [텍스트 스타일](#텍스트-스타일)
+- [색상 및 배경 스타일](#색상-및-배경-스타일)
+- [레이아웃 스타일](#레이아웃-스타일)
+- [반응형 웹](#반응형-웹)
+- [플렉스 박스](#flexflexible-box-flexbox)
 
 ## CSS(Cascading Style Sheet)
 
@@ -49,7 +53,7 @@ selector {
 
 <br>
 
-[위로이동](#목차)
+[위로 이동](#목차)
 
 ## 선택자
 
@@ -122,13 +126,12 @@ selector {
 - :enabled : 사용 가능한 요소
 - :disabled : 사용 불가능한 요소
 
-
 ## id와 class
 
 - id : 현재 문서내에 "고유"한 값으로 "하나"만을 작성
 - class : 현재 문서내에 "중복"된 값 작성 가능, "여러개" 작성 가능
 
-## 선택자 우선 순위
+## 선택자 우선순위
 
 1. 동일한 선택자를 사용하는 경우
 
@@ -143,13 +146,12 @@ p {
     color: red;
     color: blue;
 }
-
 ```
 
 2. 다른 방식의 선택자 사용
 
 - CSS 적용 우선 순위
-    : !important > 인라인 방식 > 아이디 선택자 > 클래스 선택자 > 태그 선택자
+   : !important > 인라인 방식 > 아이디 선택자 > 클래스 선택자 > 태그 선택자
 
 ```html
 <p class="txt" id="title">TEXT</p>
@@ -169,7 +171,7 @@ p {
 
 ## BEM (Block__Element--Modifier)
 
-- 사용자 인터페이스를 독립된 블록으로 분리함으로서 복잡한 페이지에서도 간단하고 신속하게 개발을 수행하는 것이 목적
+- 사용자 인터페이스를 독립된 블록으로 분리함으로써 복잡한 페이지에서도 간단하고 신속하게 개발을 수행하는 것이 목적
 - 규칙 : 클래스 이름은 영소문자로 입력하고, 단어는 하이픈으로 연결한다.
 
 1. **Block**
@@ -181,17 +183,17 @@ p {
     - Block의 이름을 상속받고 언더스코어(_) 두 개를 입력한 뒤 Element 이름을 붙인다.
     - Block과 마찬가지로 '무엇인지'를 의미하는 단어를 사용
 3. **Modifier**
-    - Block혹은 Element의 모습이나 상태 또는 움직임을 정의
+    - Block 혹은 Element의 모습이나 상태 또는 움직임을 정의
     - 클래스 이름에서 형태, 기능, 역할을 유추
     - 확장하기 쉽게
 
 ```html
 <ul class="menu">
-    <li class="menu_item">항목1</li>
-    <li class="menu_item menu__item--selected">항목2</li>
-    <li class="menu_item">항목3</li>
+    <li class="menu__item">항목1</li>
+    <li class="menu__item menu__item--selected">항목2</li>
+    <li class="menu__item">항목3</li>
 </ul>
-```
+```    
 
 <br>
 
@@ -213,11 +215,13 @@ p {
 
 - 구글 웹 폰트 : https://fonts.google.com
 
+## font-size
+
 - 글자의 크기를 지정하는 속성
 
 ```css
 선택자 {
-    font-size : 크기(px|em|rem|%);
+    font-size: 크기(px|em|rem|%);
 }
 ```
 
@@ -227,20 +231,20 @@ p {
     - **px** : 모니터의 픽셀 단위로 크기를 계산
 - 상대 크기
     - em : 부모 요소에서 지정한 폰트의 대문자 M의 너비를 1em으로 계산
-    - **rem** : 최상위 요소('html')에서 지정한 폰트의 대문자 M의 너비를 1rem으로 계산
+    - **rem** : 최상위 요소(`html`)에서 지정한 폰트의 대문자 M의 너비를 1rem으로 계산
     - %(퍼센트) : 부모 요소의 크기에 대한 상대적인 비율로 계산
-    
+
 ## font-weight
 
 - 글자의 굵기를 조절하는 속성
 
 ```css
 선택자 {
-    font-weight: 100 ~ 900 or nomal or lighter or bold or bolder;
+    font-weight: 100 ~ 900 or normal or lighter or bold or bolder;
 }
 ```
 - 100 ~ 900 : 글자의 굵기를 세밀하게 조절
-- nomal : 기본값(400)
+- normal : 기본값 (400)
 - lighter : 기본보다 더 가늘게
 - **bold** : 굵게
 - bolder : 기본보다 더 굵게
@@ -251,11 +255,11 @@ p {
 
 ```css
 선택자 {
-    font-style: nomal or italic or oblique;
+    font-style: normal or italic or oblique;
 }
 ```
 
-- italic : 글꼴에 디자인 되어 있는 기울어진 글자를 사용
+- italic : 글꼴에 디자인되어 있는 기울어진 글자를 사용
 - oblique : 원래 글꼴을 기울어지게 표시
 
 ## font-variant
@@ -263,10 +267,10 @@ p {
 - 영어의 작은 대문자로 지정할 수 있는 속성
 
 ```css
-font-variant : nomal or small-caps;
+font-variant : normal or small-caps;
 ```
 
-- nomal : 기본값으로 일반적인 형태로 표시
+- normal : 기본값으로 일반적인 형태로 표시
 - small-caps : 작은 대문자로 표시하도록 지정
 
 ## font
@@ -277,7 +281,7 @@ font-variant : nomal or small-caps;
 font: font-style font-variant font-weight font-size/line-height font-family;
 ```
 
-## color
+## color 
 
 - 글자의 색을 지정하는 속성
 - 색을 지정하는 방법은 **영문 색이름 표기법, 16진수 표기법**, rgb/**rgba** 표기법, hsl/hsla 표기법이 있다.
@@ -293,7 +297,7 @@ font: font-style font-variant font-weight font-size/line-height font-family;
 - 글자에 밑줄/윗선을 긋거나 취소선을 긋는 속성
 
 ```css
-선택자 { 
+선택자 {
     text-decoration: none or underline or overline or line-through;
 }
 ```
@@ -309,14 +313,14 @@ font: font-style font-variant font-weight font-size/line-height font-family;
 
 ```css
 선택자 {
-    text-tranform: none or capitalize or uppercase or lowercase;
+    text-transform: none or capitalize or uppercase or lowercase;
 }
 ```
 
 - none : 변환 없이 표시
 - capitalize : 시작하는 첫 번째 글자를 대문자로 변환
 - uppercase : 모든 글자를 대문자로 변환
-- lowercase : 모든 글자를 소문자로 변환 
+- lowercase : 모든 글자를 소문자로 변환
 
 ## text-shadow
 
@@ -331,7 +335,7 @@ font: font-style font-variant font-weight font-size/line-height font-family;
 
 - dx : 그림자의 가로방향 거리를 지정한다. 양수 값은 오른쪽, 음수 값은 왼쪽에 그림자를 만든다.
 - dy : 그림자의 세로방향 거리를 지정한다. 양수 값은 아래쪽, 음수 값은 위쪽에 그림자를 만든다.
-- blur : 그림자의 흐려진 정보를 나타낸다. 양수로 지정하면 그림자가 모든 뱡향으로 번지고, 음수로 지정하면 그림자가 모든 뱡향으로 축소된다.
+- blur : 그림자의 흐려짐 정도를 나타낸다. 양수로 지정하면 그림자가 모든 방향으로 번지고, 음수로 지정하면 그림자가 모든 방향으로 축소된다.
 - color : 그림자의 색상을 지정한다. 기본값은 현재 글자색
 
 ## white-space
@@ -340,23 +344,23 @@ font: font-style font-variant font-weight font-size/line-height font-family;
 
 ```css
 선택자 {
-    white-space : nomal or nowrap or pre or pre-line or pre-wrap;
+    white-space : normal or nowrap or pre or pre-line or pre-wrap;
 }
 ```
 
-- nomal : 여러 개의 공백을 하나로 표시 (기본값)
+- normal : 여러 개의 공백을 하나로 표시 (기본값)
 - nowrap : 여러 개의 공백을 하나로 표시, 영역을 넘어가는 내용은 줄바꾸지 않고 한 줄로 표시
 - pre : 여러 개의 공백을 그대로 표시, 영역을 넘어가는 내용은 자동으로 줄 바꿔 표시
 - pre-line : 여러 개의 공백을 하나로 표시, 영역을 넘어가는 내용은 자동으로 줄 바꿔 표시
 - pre-wrap : 여러 개의 공백을 그대로 표시, 영역을 넘어가는 내용은 자동으로 줄 바꿔 표시
 
-## letter-spacing 
+## letter-spacing
 
 - 글자와 글자 사이의 간격을 조정하는 속성
 
 ```css
 선택자 {
-    letter-spacing: nomal or 크기;
+    letter-spacing: normal or 크기;
 }
 ```
 
@@ -366,15 +370,16 @@ font: font-style font-variant font-weight font-size/line-height font-family;
 
 ```css
 선택자 {
-    word-spacing: nomal or 크기;
+    word-spacing: normal or 크기;
 }
 ```
 
 ## text-align
 
 - 문장을 정렬하는 속성
+
 ```css
-선택자  {
+선택자 {
     text-align: left or right or center or justify;
 }
 ```
@@ -392,9 +397,10 @@ font: font-style font-variant font-weight font-size/line-height font-family;
 ## line-height
 
 - 문장의 줄 간격을 조정하는 속성
+
 ```css
 선택자 {
-    line-height:normal or 숫자(단위);
+    line-height: normal or 숫자(단위);
 }
 ```
 
@@ -412,25 +418,30 @@ font: font-style font-variant font-weight font-size/line-height font-family;
 - ellipsis : 말 줄임으로 잘린 텍스트를 표현한다.
 
 <br>
+
 # 색상 및 배경 스타일
 
 [위로 이동](#목차)
 
-## 색상표현 방법
+## 색상 표현 방법
 
 ### 색상 이름 표기법
+
 - 영문으로 색상 이름을 표시하는 방법
 - 모든 브라우저에서 표현할 수 있는 색상을 웹 안전 색상(Web Safe Colors)
 - 216가지
 
 ### 16진수 표기법
+
 - #기호 다음에 6자리 16진수로 표시하는 방법
-- 6자리는 앞에서 부터 두 자리씩 묶어서 Red, Green, Blue로 표시
-- #000000(검은색) ~ #FFFFFF(흰색)
+- 6자리는 앞에서부터 두 자리씩 묶어서 Red, Green, Blue로 표시
+- #000000(검은색) ~ #ffffff(흰색)
 
 ### rgb/rgba 표기법
+
 - rgb 표기법은 16진수 표기법과 다르게 10진수로 Red, Green, Blue를 표시
 - rgba 표기법은 rgb에 불투명도 값을 추가로 지정 (0은 완전 투명, 1은 완전 불투명)
+
 ```css
 rgb(red(0~255), green(0~255), blue(0~255));
 rgba(red(0~255), green(0~255), blue(0~255), alpha(0~1));
@@ -440,7 +451,7 @@ rgba(red(0~255), green(0~255), blue(0~255), alpha(0~1));
 
 - hsl 표기법은 앞에서부터 색상(Hue), 채도(Saturation), 밝기(Brightness)를 표시
 - hsla 표기법은 hsl에 불투명도 값을 추가로 지정 (0은 완전 투명, 1은 완전 불투명)
-- 색상(Hue)은 색상환으로 표시 (0,360 빨간색, 120 초록색, 240 파란색)
+- 색상(Hue)은 색상환으로 표시 (0, 360 빨간색, 120 초록색, 240 파란색)
 - 채도는 %로 표시 (0%는 회색톤, 100%는 순색)
 - 밝기는 %로 표시 (0%는 가장 어둡고, 100%는 가장 밝다.)
 
@@ -470,7 +481,7 @@ hsla(Hue(0~360), Saturation(0~100%), Brightness(0~100%), alpha(0~1));
 ```
 
 - border-box : 테두리(border)까지 적용 (기본값)
-- padding-box : 테두리를 뺀 패딩(padding)  범위까지 적용
+- padding-box : 테두리를 뺀 패딩(padding) 범위까지 적용
 - content-box : 내용(content) 부분에만 적용
 
 ## background-image
@@ -488,11 +499,10 @@ hsla(Hue(0~360), Saturation(0~100%), Brightness(0~100%), alpha(0~1));
 - 배경 이미지 반복 여부를 지정하는 속성
 
 ```css
-선택자 { 
-    background-reapeat : repeat or repeat-x or repeat-y or no-repeat;
+선택자 {
+    background-repeat: repeat or repeat-x or repeat-y or no-repeat;
 }
 ```
-
 - repeat : 배경 이미지가 가득 찰 때까지 가로와 세로로 반복 (기본값)
 - repeat-x : 배경 이미지를 가로로 반복
 - repeat-y : 배경 이미지를 세로로 반복
@@ -503,14 +513,14 @@ hsla(Hue(0~360), Saturation(0~100%), Brightness(0~100%), alpha(0~1));
 - 배경 이미지 크기를 조절하는 속성
 
 ```css
-선택자 { 
+선택자 {
     background-size: auto or contain or cover or 크기 or 백분율;
 }
 ```
 
 - auto : 원래 배경 이미지 크기만큼 표시 (기본값)
 - contain : 요소 안에 배경 이미지가 들어가도록 확대/축소
-- **cover** : 요소를 배경 이미지가 모두 덮을때까지 확대
+- **cover** : 요소를 배경 이미지가 모두 덮을 때까지 확대
 - 크기 : 너비와 높이 값을 지정
 - 백분율 : 요소의 크기를 기준으로 너비와 높이의 백분율 값을 지정
 
@@ -523,12 +533,12 @@ hsla(Hue(0~360), Saturation(0~100%), Brightness(0~100%), alpha(0~1));
     background-position: 수평위치 수직위치;
 }
 ```
-- 수평 위치: left, center, right, 크기값(px), 백분율로 표시
-- 수직 위치: top, center, bottom, 크기값(px), 백분율로 표시
+- 수평 위치 : left, center, right, 크기값(px), 백분율로 표시
+- 수직 위치 : top, center, bottom, 크기값(px), 백분율로 표시
 
 ## background-origin
 
-- 배경이미지를 배치할 때 기준을 지정하는 속성
+- 배경 이미지를 배치할 때 기준을 지정하는 속성
 
 ```css
 선택자 {
@@ -537,7 +547,7 @@ hsla(Hue(0~360), Saturation(0~100%), Brightness(0~100%), alpha(0~1));
 ```
 
 - border-box : 테두리(border)가 기준
-- padding-box : 테두리를 뺀 패딩(padding)이 기준
+- padding-box : 테두리를 뺀 패딩(padding)이 기준(기본값)
 - content-box : 내용(content)이 기준
 
 ## background-attachment
@@ -550,15 +560,15 @@ hsla(Hue(0~360), Saturation(0~100%), Brightness(0~100%), alpha(0~1));
 }
 ```
 
-- scroll : 화면 스크롤과 함께 배경 이미지도 스크롤(기본값) 
-- **fixed** : 화면이 스크롤 되더라도 배경 이미지는 고정  
+- scroll : 화면 스크롤과 함께 배경 이미지도 스크롤 (기본값)
+- **fixed** : 화면이 스크롤 되더라도 배경 이미지는 고정
 
 ## background
 
 - 배경 스타일 속성을 한 번에 지정할 수 있는 속성
 
 ```css
-선택자 { 
+선택자 {
     background: image repeat attachment position clip origin size;
 }
 ```
@@ -567,12 +577,12 @@ hsla(Hue(0~360), Saturation(0~100%), Brightness(0~100%), alpha(0~1));
 
 ## 박스 모델(Box Model)
 - 모든 요소들은 사각형 박스로 표현되는데 스타일 시트에서는 박스 형태인 요소를 박스 모델이라고 한다.
-- CSS를 사용하면 박스모델 요소의 크기, 위치, 속성을 변경할 수 있다.
-- 박스 모델은 콘텐츠(Content) 영역과 테두리와 콘첸츠 영역 사이의 여백인 패딩(Padding),  박스 모델 사이의 여백인 마진(Margin)으로 구성된다.
+- CSS를 사용하면 박스 모델 요소의 크기, 위치, 속성을 변경할 수 있다.
+- 박스 모델은 콘텐츠(Content) 영역과 테두리와 콘텐츠 영역 사이의 여백인 패딩(Padding), 박스 모델 사이의 여백인 마진(Margin)으로 구성된다.
 
 ## width, height
 
-- 박스 모델에서 콘텐츠 영역의 크기글 지정할 때 사용
+- 박스 모델에서 콘텐츠 영역의 크기를 지정할 때 사용
 - width : 너비 지정
 - height : 높이 지정
 
@@ -592,7 +602,7 @@ hsla(Hue(0~360), Saturation(0~100%), Brightness(0~100%), alpha(0~1));
 
 ```css
 선택자 {
-     display: none or block or inline or inline-block or ...;
+    display: none or block or inline or inline-block or ...;
 }
 ```
 
@@ -672,6 +682,7 @@ hsla(Hue(0~360), Saturation(0~100%), Brightness(0~100%), alpha(0~1));
     border[-위치-위치]-radius: 크기 or 백분율;
 }
 ```
+
 ## 포지셔닝
 
 - CSS를 이용해서 여러 요소를 원하는 위치에 적절하게 배치하는 것
@@ -685,8 +696,7 @@ hsla(Hue(0~360), Saturation(0~100%), Brightness(0~100%), alpha(0~1));
     box-sizing: content-box or border-box;
 }
 ```
-
-- content-box : 요소의 너비와 높이를 콘텐츠를 기준으로 지정(기본값)
+- content-box : 요소의 너비와 높이를 콘텐츠를 기준으로 지정 (기본값)
 - border-box : 요소의 너비와 높이를 테두리를 기준으로 지정
 
 ## float, clear
@@ -739,9 +749,8 @@ hsla(Hue(0~360), Saturation(0~100%), Brightness(0~100%), alpha(0~1));
 ```
 
 - visible : 요소를 표시 (기본값)
-- hidden : 요소를 감춘다. 단 , 크기는 유지하기 때문에 공간은 차지한다.
+- **hidden** : 요소를 감춘다. 단, 크기는 유지하기 때문에 공간은 차지한다.
 - collapse : 표의 행, 열, 행 그룹 등에서 지정하면 서로 겹치도록 지정한다. 그 외의 영역에서 사용하면 hidden처럼 처리된다.
-
 
 ## z-index
 
@@ -753,4 +762,213 @@ hsla(Hue(0~360), Saturation(0~100%), Brightness(0~100%), alpha(0~1));
 선택자 {
     z-index: 값;
 }
+```
+
+<br>
+
+[위로 이동](#목차)
+
+# 반응형 웹
+
+- 구간 별 페이지 제작 : pc, tablet, mobile
+- viewport : 스마트폰 화면에서 실제 내용이 표시되는 영역
+
+```html
+<meta name="viewport" content="속성1=값1, 속성2=값2, ...">
+```
+
+- width : 뷰포트 너비 (device-width or 크기)
+- height : 뷰포트 높이 (device-height or 크기)
+- user-scalable : 확대/축소 가능 여부 (yes or no, yes : 기본값)
+- initial-scale : 초기 확대/축소 값 (1 ~ 10, 1 : 기본값)
+- minimum-scale : 최소 확대/축소 값 (0 ~ 10, 0.25 : 기본값)
+- maximum-scale : 최대 확대/축소 값 (0 ~ 10, 1.6 : 기본값)
+
+## 미디어 쿼리(Media Queries)
+
+- 사이트에 접속하는 장치에 따라 특정한 CSS 스타일을 적용
+
+```css
+@media 미디어유형 [and 조건] ... {
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 360px) {
+    ...
+}
+
+@media screen and (min-width: 700px) {
+    
+}
+```
+
+<br>
+
+[위로 이동](#목차)
+
+# Flex(Flexible Box, Flexbox)
+
+- CSS 레이아웃 모델로 화면 크기에 따라 레이아웃의 배치나 크기를 조절할 때 편리하게 사용
+
+```html
+<div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+```
+
+## display: flex;
+
+- Flex 컨테이너에 display:flex;를 적용하면서 시작
+
+```css
+.container {
+    display: flex;
+}
+```
+
+## flex-direction
+
+- 배치 방향 설정
+- 아이템들이 배치되는 메인 축의 방향을 결정하는 속성
+
+```css
+.container {
+    flex-direction: row or column or row-reverse or column-reverse;
+}
+```
+- row : 왼쪽부터 순차적으로 배치 (기본값)
+- row-reverse : 오른쪽으로부터 순차적으로 배치
+- column : 위에서 아래로 순차적으로 배치
+- column-reverse : 아래에서 위로 순차적으로 배치
+
+## flex-wrap
+
+- 아이템 줄바꿈을 어떻게 할지 결정하는 속성
+
+```css
+.container {
+    flex-wrap: nowrap or wrap or wrap-reverse;
+}
+```
+
+- nowrap : 줄바꿈을 하지 않음 (기본값)
+- wrap : 줄바꿈
+- wrap-reverse : 역순으로 배치 후 줄바꿈
+
+## flex-flow
+
+- flex-direction과 flex-wrap을 한꺼번에 지정할 수 있는 단축 속성
+
+```css
+.container {
+    flex-flow : row wrap;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+```
+
+## justify-content
+
+- 메인축 방향으로 정렬
+
+```css
+.container {
+    justify-content: flex-start or flex-end or center or space-between or space-around or space-evenly;
+}
+```
+
+- flex-start : 아이템들을 시작점으로 정렬 (기본값)
+- flex-end : 아이템들을 끝점으로 정렬
+- center : 아이템들을 가운데로 정렬
+- space-between : 아이템들 사이에 균일한 간격 생성
+- space-around : 각 아이템의 좌우에 균일한 간격 생성
+- space-evenly : 아이템들의 사이와 양 끝에 균일한 간격 생성
+
+## align-items
+
+- 수직축 방향으로 정렬
+
+```css
+.container {
+    align-items: stretch or flex-start or flex-end or center or baseline;
+}
+```
+
+- stretch : 아이템들을 위아래 방향으로 끝까지 늘림 (기본값)
+- flex-start : 아이템들을 위쪽으로 정렬
+- flex-end : 아이템들을 아래쪽으로 정렬
+- center : 아이템들을 중간 정렬
+- baseline : 아이템들을 텍스트 베이스라인 기준으로 정렬
+
+## align-content
+- 여러 행 정렬
+- flex-wrap: wrap;이 설정된 상태에서, 아이템들의 행이 2줄 이상인 경우 수직축 방향 정렬을 결정하는 속성
+
+```css
+.container {
+    align-content: stretch or flex-start or flex-end or center or space-between or space-around or space-evenly;
+}
+```
+
+## flex-basis
+
+- flex 아이템의 기본 크기 설정 (flex-direction이 row일 때는 너비, column일 때는 높이)
+
+```css
+.item {
+    flex-basis : auto or 0 or 크기;
+}
+```
+
+## flex-grow
+
+- flex-basis의 값보다 커질 수 있는지를 결정하는 속성
+
+```css
+.item {
+    flex-grow: 0 or 숫자;
+}
+```
+
+## flex-shrink
+
+- flex-grow와 쌍을 이루는 속성으로, flex-basis 값보다 작아질 수 있는지를 결정하는 속성
+
+```css
+.item {
+    flex-shrink: 1 or 숫자;
+}
+```
+
+## flex
+
+- flex-grow, flex-shrink, flex-basis를 한 번에 쓸 수 있는 단축 속성
+
+```css
+.item {
+    flex: 1; /* flex-grow: 1; flex-shrink: 1; flex-basis: 0; */
+    flex: 1 1 auto; /* flex-grow: 1; flex-shrink: 1; flex-basis: auto;*/
+    flex: 1 500px; /* flex-grow: 1; flex-shrink: 1; flex-basis: 500px; */
+}
+```
+
+## align-self
+
+- 특정 아이템만 정렬을 따로 정렬하고자 할 때 사용하는 속성
+
+```css
+.item {
+    align-self: flex-start or flex-end or center or baseline or stretch;
+}
+```
+
+## order
+
+- item들의 순서를 바꿀 수 있는 속성
+
+```css
+order : 0 or 숫자;
 ```
