@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+</head>
+<body>
+    <h1>이벤트</h1>
+
+    <nav>
+        <a href="#" class="menu">menu 1</a>
+        <a href="#" class="menu">menu 2</a>
+        <a href="#" class="menu">menu 3</a>
+    </nav>
+
+    <script>
+        let current;
+        const h1 = document.querySelector("h1");
+        const nav = document.querySelector("nav");
+        const menuList = document.querySelector(".menu");
+
+           function menuHandler(e) {
+
+            if(current){
+                current.style.backgroundColor = 'transparent';
+            }
+            //    console.log(e);
+            //    console.log(e.target);
+               e.target.style.backgroundColor = 'yellow'
+               current = e.target;
+           }
+           nav.addEventListener('click',menuHandler);
+        function clickHandler() {
+           this.style.backgroundColor = 'dodgerblue';
+           console.log(this);
+        }
+        h1.addEventListener('click', clickHandler);
+       </script>
+
+</body>
+</html>
