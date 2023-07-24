@@ -1,0 +1,33 @@
+.container {
+    text-align: center;
+}
+.main-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 15px;
+}
+.btn {
+    cursor: pointer;
+    margin: 15px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.click {
+    background-color: #ef4da0;
+    color: #070952;
+}
+.restart {
+    background-color: #070952;
+    color: #ef4da0;
+}
+.main-result {
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-style: italic;
+}
