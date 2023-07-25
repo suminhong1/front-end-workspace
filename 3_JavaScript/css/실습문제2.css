@@ -93,6 +93,20 @@ main section p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
+}
+
+.text-animation {
+    animation: textAni 1s forwards;
+}
+
+@keyframes textAni {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
 }
