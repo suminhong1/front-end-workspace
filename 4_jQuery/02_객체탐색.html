@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체탐색</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> 
+    <style>
+        .wrap, .wrap *, .wrap2, .wrap2 * {
+            border: 1px solid lightgray;
+            display: block;
+            padding: 5px;
+            margin: 15px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h2>1. Filterring 메소드</h2>
+    <h4 class="test">test-1</h4>
+    <h4 class="test">test-2</h4>
+    <h4 class="test">test-3</h4>
+    <h4 class="test">test-4</h4>
+    <h4>test-5</h4>
+    <h4 class="test">test-6</h4>
+
+    <h2>2. Ancestors & Descendants 메소드</h2>
+    
+    <div class="wrap">
+        <div>div
+            <ul>ul
+                <li>li
+                    <span>span
+
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div>div
+            <p>p
+                <span>span
+    
+                </span>
+            </p>
+        </div>
+    </div>
+    
+    <h2>3. Sideways 메소드</h2>
+
+    <div class="wrap2">
+        <p>p</p>
+        <span class="class1">span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+
+    <script src="js/02_객체탐색.js"></script>
+</body>
+</html>
