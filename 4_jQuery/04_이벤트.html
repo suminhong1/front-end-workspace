@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+        .area {
+            width: 150px;
+            height: 150px;
+            border: 1px solid;
+            text-align: center;
+            line-height: 150px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>1. 이벤트 연결</h2>
+    <h3>1) on, off</h3>
+
+    <div id="area1" class="area"></div>
+
+    <h3>2) one</h3>
+
+    <div id="area2" class="area"></div>
+
+    <h2>2. 키보드 이벤트</h2>
+    <h3>1) keydown, keypress, keyup</h3>
+    <textarea id="textarea1" cols="40" rows="10"></textarea>
+
+    <h3>2) 글자 수 세기</h3>
+    <div>
+        <p>
+            <span id="counter">0</span>
+            /
+            <span id="maxLength">50</span>
+        </p>
+        <textarea id="textarea2" cols="30" rows="10"></textarea>
+    </div>
+
+    <script src="js/04_이벤트.js"></script>
+</body>
+
+</html>
