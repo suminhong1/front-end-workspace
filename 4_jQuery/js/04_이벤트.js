@@ -104,3 +104,29 @@ $('#textarea2').on('keyup', function(e) {
         
 //     }
 // });
+
+// 아이디 조건 확인
+
+
+$('#userId').on('keydown', function(e) {
+    const regExp = /^[a-z][a-z0-9]{4,12}$/;
+    const a = $(e.target).val();
+
+if(regExp.test(a)) {
+    $('#idCheck').text('사용 가능한 아이디 입니다.').css('color',"green");
+} else if(a === "") {
+    $('#idCheck').text("");
+} else {
+    $('#idCheck').text('사용 불가능한 아이디 입니다.').css('color',"red");
+}
+
+});
+// let a = 0;
+$('#area3').on('click',function() { 
+    // $("#counter2").text(++a);
+    let currentCount = parseInt($('#counter2').text());
+    $('#counter2').text(++currentCount);
+});
+$('#btn').on('click', function() {
+    $('#area3').trigger('click');
+})
