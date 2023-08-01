@@ -1,136 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>정규표현식</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>정규표현식</h1>
 
     <h2>1. 정규표현식과 함께 쓰이는 함수들</h2>
     <div id="area1"></div>
     <script>
-        const area1 =  document.querySelector('#area1');
-        const str1 = "javascript jquery bootstrap";
-        const regExp1 = /script/;
-        area1.innerHTML += `regExp1.test(str1) : ${regExp1.test(str1)}<br>`;
-        area1.innerHTML += `regExp1.exec(str1) : ${regExp1.exec(str1)}<br>`;
-        area1.innerHTML += `str1.match(regExp1) : ${str1.match(regExp1)}<br>`;
-        area1.innerHTML += `str1.search(regExp1) : ${str1.search(regExp1)}<br>`;
-        area1.innerHTML += `str1.replace(regExp1, '스크립트') : ${str1.replace(regExp1,'스크립트')}<br>`;
-        area1.innerHTML += `str1.split(regExp1) : ${str1.split(regExp1)}<br>`;
+      const area1 = document.querySelector("#area1");
+      const str1 = "javascript jquery bootstrap";
+      const regExp1 = /script/;
+      area1.innerHTML += `regExp1.test(str1) : ${regExp1.test(str1)}<br>`;
+      area1.innerHTML += `regExp1.exec(str1) : ${regExp1.exec(str1)}<br>`;
+      area1.innerHTML += `str1.match(regExp1) : ${str1.match(regExp1)}<br>`;
+      area1.innerHTML += `str1.search(regExp1) : ${str1.search(regExp1)}<br>`;
+      area1.innerHTML += `str1.replace(regExp1, '스크립트') : ${str1.replace(
+        regExp1,
+        "스크립트"
+      )}<br>`;
+      area1.innerHTML += `str1.split(regExp1) : ${str1.split(regExp1)}<br>`;
     </script>
 
     <h2>2. 플래그 문자</h2>
     <div id="area2"></div>
     <script>
-        const area2 =  document.querySelector('#area2');
-        const str2 = "JAvaScript jQuery Ajax";
-        // replace 함수에서 '$&' 패턴은 만족하는 문자열을 가리킴
-        area2.innerHTML += `/a/ : ${str2.replace(/a/, '($&)')}<br>`;
-        area2.innerHTML += `/a/i : ${str2.replace(/a/i, '($&)')}<br>`;
-        area2.innerHTML += `/a/g : ${str2.replace(/a/g, '($&)')}<br>`;
-        area2.innerHTML += `/a/ig : ${str2.replace(/a/ig, '($&)')}<br>`;
-        area2.innerHTML += `/a/gi : ${str2.replace(/a/gi, '($&)')}<br>`;
+      const area2 = document.querySelector("#area2");
+      const str2 = "JAvaScript jQuery Ajax";
+      // replace 함수에서 '$&' 패턴은 만족하는 문자열을 가리킴
+      area2.innerHTML += `/a/ : ${str2.replace(/a/, "($&)")}<br>`;
+      area2.innerHTML += `/a/i : ${str2.replace(/a/i, "($&)")}<br>`;
+      area2.innerHTML += `/a/g : ${str2.replace(/a/g, "($&)")}<br>`;
+      area2.innerHTML += `/a/ig : ${str2.replace(/a/gi, "($&)")}<br>`;
+      area2.innerHTML += `/a/gi : ${str2.replace(/a/gi, "($&)")}<br>`;
     </script>
 
     <h2>3. 메타 문자</h2>
     <h3>반복 검색</h3>
     <div id="area3"></div>
     <script>
-        const area3 = document.querySelector('#area3');
-        const str3 = "a aa aaa aaaa";
-        area3.innerHTML += `/a{1,2}/g : ${str3.replace(/a{1,2}/g, '($&)')}<br>`;
-        area3.innerHTML += `/a{3}/g : ${str3.replace(/a{3}/g, '($&)')}<br>`;
-        area3.innerHTML += `/a{2,}/g : ${str3.replace(/a{2,}/g, '($&)')}<br>`;
-        area3.innerHTML += `/a+/g : ${str3.replace(/a+/g, '($&)')}<br>`;
-        area3.innerHTML += `/a?/g : ${str3.replace(/a?/g, '($&)')}<br>`;
+      const area3 = document.querySelector("#area3");
+      const str3 = "a aa aaa aaaa";
+      area3.innerHTML += `/a{1,2}/g : ${str3.replace(/a{1,2}/g, "($&)")}<br>`;
+      area3.innerHTML += `/a{3}/g : ${str3.replace(/a{3}/g, "($&)")}<br>`;
+      area3.innerHTML += `/a{2,}/g : ${str3.replace(/a{2,}/g, "($&)")}<br>`;
+      area3.innerHTML += `/a+/g : ${str3.replace(/a+/g, "($&)")}<br>`;
+      area3.innerHTML += `/a?/g : ${str3.replace(/a?/g, "($&)")}<br>`;
     </script>
 
     <h3>문자열의 앞, 뒤 구분</h3>
     <div id="area4"></div>
     <script>
-        const area4 = document.querySelector('#area4');
-        const str4 = "Javascript\nJquery\nTypeScript\nAjax";
-        area4.innerHTML += `/^j/ig : ${str4.replace(/^j/ig, '($&)')}<br>`;
-        area4.innerHTML += `/^j/igm : ${str4.replace(/^j/igm, '($&)')}<br>`;
-        area4.innerHTML += `/ipt$/igm : ${str4.replace(/ipt/igm, '($&)')}<br>`;
+      const area4 = document.querySelector("#area4");
+      const str4 = "Javascript\nJquery\nTypeScript\nAjax";
+      area4.innerHTML += `/^j/ig : ${str4.replace(/^j/gi, "($&)")}<br>`;
+      area4.innerHTML += `/^j/igm : ${str4.replace(/^j/gim, "($&)")}<br>`;
+      area4.innerHTML += `/ipt$/igm : ${str4.replace(/ipt/gim, "($&)")}<br>`;
     </script>
 
     <h3>OR 검색</h3>
     <div id="area5"></div>
     <script>
-        const area5 = document.querySelector("#area5");
-        let str5 = "Javascript Jquery Ajax";
-        area5.innerHTML += `/[aj]/ig : ${str5.replace(/[aj]/ig, '($&)')}<br>`;
-        // [] 내의 ^는 not 의미
-        area5.innerHTML += `/[^aj]/ig : ${str5.replace(/[^aj]/ig, '($&)')}<br>`;
+      const area5 = document.querySelector("#area5");
+      let str5 = "Javascript Jquery Ajax";
+      area5.innerHTML += `/[aj]/ig : ${str5.replace(/[aj]/gi, "($&)")}<br>`;
+      // [] 내의 ^는 not 의미
+      area5.innerHTML += `/[^aj]/ig : ${str5.replace(/[^aj]/gi, "($&)")}<br>`;
 
-        str5 = '123 Javascript';
-        // [] 내의 -는 범위 지정을 의미
-        area5.innerHTML += `/[a-z]/g : ${str5.replace(/[a-z]/g, '($&)')}<br>`;
-        area5.innerHTML += `/[A-Z]/g : ${str5.replace(/[A-Z]/g, '($&)')}<br>`;
-        area5.innerHTML += `/[0-9]/g : ${str5.replace(/[0-9]/g, '($&)')}<br>`;
-        area5.innerHTML += `/[a-z0-9A-Z]/g : ${str5.replace(/[0-z]/g, '($&)')}<br>`;
+      str5 = "123 Javascript";
+      // [] 내의 -는 범위 지정을 의미
+      area5.innerHTML += `/[a-z]/g : ${str5.replace(/[a-z]/g, "($&)")}<br>`;
+      area5.innerHTML += `/[A-Z]/g : ${str5.replace(/[A-Z]/g, "($&)")}<br>`;
+      area5.innerHTML += `/[0-9]/g : ${str5.replace(/[0-9]/g, "($&)")}<br>`;
+      area5.innerHTML += `/[a-z0-9A-Z]/g : ${str5.replace(
+        /[0-z]/g,
+        "($&)"
+      )}<br>`;
     </script>
 
     <h3>임의의 문자열 검색</h3>
     <div id="area6"></div>
     <script>
-        const area6 = document.querySelector("#area6");
-        const str6 = '123 Javascript';
-        area6.innerHTML += `/..../g : ${str6.replace(/..../g, '($&)')}`;
-
+      const area6 = document.querySelector("#area6");
+      const str6 = "123 Javascript";
+      area6.innerHTML += `/..../g : ${str6.replace(/..../g, "($&)")}`;
     </script>
 
     <h3>추가 메타 문자</h3>
     <div id="area7"></div>
     <script>
-        const area7 = document.querySelector('#area7');
-        const str7 = "A1 B2 C3 d_4 e:5 ` ffg77--__ \t가\n나\n다";
-        area7.innerHTML += `/\\d/g : ${str7.replace(/\d/g, '($&)')}<br>`; // [0-9]/g
-        area7.innerHTML += `/\\D/g : ${str7.replace(/\D/g, '($&)')}<br>`; // [^0-9]/g
-        area7.innerHTML += `/\\w/g : ${str7.replace(/\w/g, '($&)')}<br>`; // [0-9a-zA-Z_]/g
-        area7.innerHTML += `/\\W/g : ${str7.replace(/\W/g, '($&)')}<br>`; // [^0-9a-zA-Z_]/g
-        area7.innerHTML += `/\\s/g : ${str7.replace(/\s/g, '($&)')}<br>`; // /[ \n\t]/g
-        area7.innerHTML += `/\\S/g : ${str7.replace(/\S/g, '($&)')}<br>`; // /[^ \n\t]/g
+      const area7 = document.querySelector("#area7");
+      const str7 = "A1 B2 C3 d_4 e:5 ` ffg77--__ \t가\n나\n다";
+      area7.innerHTML += `/\\d/g : ${str7.replace(/\d/g, "($&)")}<br>`; // [0-9]/g
+      area7.innerHTML += `/\\D/g : ${str7.replace(/\D/g, "($&)")}<br>`; // [^0-9]/g
+      area7.innerHTML += `/\\w/g : ${str7.replace(/\w/g, "($&)")}<br>`; // [0-9a-zA-Z_]/g
+      area7.innerHTML += `/\\W/g : ${str7.replace(/\W/g, "($&)")}<br>`; // [^0-9a-zA-Z_]/g
+      area7.innerHTML += `/\\s/g : ${str7.replace(/\s/g, "($&)")}<br>`; // /[ \n\t]/g
+      area7.innerHTML += `/\\S/g : ${str7.replace(/\S/g, "($&)")}<br>`; // /[^ \n\t]/g
     </script>
 
     <h2>4. 연습</h2>
     <h3>주민등록 번호확인</h3>
     <div id="area8">
-        <input type="text" placeholder="-포함해서 입력하시오" id="pno" name="[pno]">
-        <button>확인</button>
+      <input
+        type="text"
+        placeholder="-포함해서 입력하시오"
+        id="pno"
+        name="[pno]"
+      />
+      <button>확인</button>
     </div>
-    
+
     <script>
-        const pno = document.querySelector('#pno');
-        const check = document.querySelector('button');
-        let regExp = /패턴/;
+      const pno = document.querySelector("#pno");
+      const check = document.querySelector("button");
+      let regExp = /패턴/;
 
-        // 1단계 : 6글자-7글자
-        regExp = /^......-.......$/;
+      // 1단계 : 6글자-7글자
+      regExp = /^......-.......$/;
 
-        // 2단계 : 숫자값6개-숫자값7개-[1~4]숫자값6개
-        regExp = /^\d{6}-[1-4]\d{6}$/;
+      // 2단계 : 숫자값6개-숫자값7개-[1~4]숫자값6개
+      regExp = /^\d{6}-[1-4]\d{6}$/;
 
-        // 3단계 : 
-        /*
+      // 3단계 :
+      /*
             - 생년 (두자리) => 아무 숫자로 두자리만 채우면 됨 \d{2}
             - 생월 (두자리) => 앞자리가 0일 경우 뒷자리는 1~9까지 가능 => 0[1-9] 앞자리가 1일 경우 뒷자리는 0~2까지 가능 => 0[1-9]|1[0-2]
 W            - 일 (두자리) => 앞자리가 0일 경우 뒷자리는 1~9까지 가능 => 0[1-9] 앞자리가 1 또는 2일 경우 뒷자리는 0~9까지 가능 => [1-2][0-9] 앞자리가 3일 경우 뒷자리는 0-1까지 가능 => 3[0-1] => (0[1-9]|[1-2][0-9]|3[0-1])
         */
-        regExp = /^\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])-[14]\d{6}$/;
+      regExp = /^\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])-[14]\d{6}$/;
 
-        check.addEventListener('click', function() {
-            if(regExp.test(pno.value)) {               
-                alert('정상 입력!');
-            } else { 
-                alert('잘못 입력!');
-            }
-        });
+      check.addEventListener("click", function () {
+        if (regExp.test(pno.value)) {
+          alert("정상 입력!");
+        } else {
+          alert("잘못 입력!");
+        }
+      });
     </script>
-    
-</body>
+  </body>
 </html>

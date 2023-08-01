@@ -3,6 +3,7 @@
 - 브라우저와 관련된 객체들
 
 ## window
+
 - 브라우저 창에 대한 설정을 하는 가장 최상위 객체
 - 브라우저가 실행될 때 가장 먼저 생성되며 하위의 브라우저 각 요소에 해당하는 객체가 만들어진다.
 - BOM : location, history, navigator, screen
@@ -15,6 +16,7 @@
 - 세번째 : 새 창의 너비, 높이, 주소창 여부, 툴바여부, 스크롤바 여부, 등 새로운 창의 특성
 
 * 창의 특성 (브라우저마다 적용범위 다름)
+
 - width : 창의 너비(px)
 - height : 창의 높이(px)
 - resizable : 창 크기 조절 가능 여부 (yes or no)
@@ -71,6 +73,7 @@
 - html 태그(요소)를 노드라고 한다.
 
 ## 문서 객체 가져오기
+
 -
 - HTML 문서에 당연히 있는 내용들은 태그별로 가져올 수 있다.
 
@@ -130,29 +133,30 @@ document.querySelectorAll("선택자");
 - innerHTML : HTML 형식으로 넣는다.
 
 ```js
-문서객체.textContent
-문서객체.innerHTML
+문서객체.textContent;
+문서객체.innerHTML;
 ```
 
 ### setAttribute, getAttribute
 
 - setAttribute: 문서 객체의 속성을 추가하거나 수정할 때
 - getAttribute: 문서 객체의 속성을 가져올 때
-- data-xxx :data-로 시작하는 표준 커스텀 속성. 
+- data-xxx :data-로 시작하는 표준 커스텀 속성.
 - data-index, data-id, data-role등 data-의 형식으로 시작하면 어떤 속성이든 필요에 따라 임의로 추가할 수 있다.
+
 ```js
-문서객체.setAttribute(속성이름, 값)
-문서객체.getAttribute(속성이름)
+문서객체.setAttribute(속성이름, 값);
+문서객체.getAttribute(속성이름);
 ```
 
 ### style 조작
 
 - 문서 객체의 스타일을 조작할 때는 style로 접근할 수 있다.
 - style 속성은 - 기호 대신 캐멀 케이스로 사용을 해야 한다.
-    ex. background-color => backgroundColor
+  ex. background-color => backgroundColor
 
 ```js
-문서객체.style.속성 = "값"
+문서객체.style.속성 = "값";
 ```
 
 ### classList
@@ -160,6 +164,7 @@ document.querySelectorAll("선택자");
 - 사실 스타일을 조작할 때 style로 접근하는 방식보다 미리 클래스에 스타일을 지정하고 classList로 조작
 - contains는 해당 클래스명 유무를 체크
 - 있다면 삭제, 없다면 추가를 알아서 해주는 toggle을 사용하는 것도 있음
+
 ```js
 문서객체.classList.add("클래스명");
 문서객체.classList.remove("클래스명");
@@ -167,6 +172,7 @@ document.querySelectorAll("선택자");
 문서객체.classList.contains("클래스명");
 문서객체.classList.toggle("클래스명");
 ```
+
 ## 문서 객체 추가하기
 
 - createElement로 문서 객체 생성
@@ -238,7 +244,7 @@ const 자식객체 = document.createElement(문서객체이름); // 태그
 - 리터럴을 사용하는 것이 일반적이다.
 
 ```js
-const regExp1 = new RegExp('패턴');
+const regExp1 = new RegExp("패턴");
 const regExp1 = /패턴/;
 ```
 
@@ -276,7 +282,7 @@ const regExp = /패턴/플래그;
 ### 반복 검색
 
 - {m, n}은 앞선 패턴이 최소 m번 최대 n번 반복되는 문자열을 의미
-- + : 앞선 패턴이 최소 한 번 이상 반복되는 문자열을 의미 {1, }
+- - : 앞선 패턴이 최소 한 번 이상 반복되는 문자열을 의미 {1, }
 - ? : 앞선 패턴이 최대 한 번 이상 반복되는 문자열을 의미 {0, 1}
 
 ### 문자열의 앞, 뒤 구분
@@ -292,11 +298,11 @@ const regExp = /패턴/플래그;
 
 - . : 임의의 문자 한 개를 의미하고, 문자 내용은 무엇이든 상관없다.
 
-### 추가 메타 문자 
+### 추가 메타 문자
 
 - \d : 숫자를 의미
-- \D : 숫자가 아닌 문자를 의미\
-- \w : 알파벳, 숫자, 언더 스코어(_)를 의미
-- \W : 알파벳, 숫자, 언더스코어(_)가 아닌 문자를 의미
+- \D : 숫자가 아닌 문자를 의미
+- \w : 알파벳, 숫자, 언더 스코어(\_)를 의미
+- \W : 알파벳, 숫자, 언더스코어(\_)가 아닌 문자를 의미
 - \s : 공백 문자를 의미 (띄어쓰기, 탭, 줄바꿈)
 - \S : 공백 문자가 아닌 문자를 의미
