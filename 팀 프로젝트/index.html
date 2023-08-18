@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>팀 프로젝트</title>
+    <style>
+      .flex-div {
+        display: flex;
+        align-items: center;
+      }
+      img {
+        cursor: pointer;
+      }
+      a {
+        font-size: 30px;
+        text-decoration-line: none;
+        color: black;
+      }
+      nav {
+        padding: 10px 2%;
+        justify-content: space-between;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background: #fff;
+        position: static;
+        top: 0;
+        z-index: 10;
+      }
+      .nav-right img{
+        width: 50px;
+        margin-right: 0;
+      }
+      .nav-left .logo {
+        width: 85px;
+        margin-right: 25px;
+      }
+      .nav-left span{
+        margin-left: 50px;
+      }
+      .nav-middle {
+        margin-right: 450px;
+      }
+      .nav-middle img {
+        width: 35px;
+        margin-right: 25px;
+      }
+      .nav-middle .searchbox {
+        height: 40px;
+        border: 1px solid #ccc;
+        margin-right: 15px;
+        padding: 8px 12px;
+        border-radius: 25px;
+      }
+      .nav-middle .searchbox input {
+        width: 700px;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        font-size: 30px;
+      }
+      .body2 #body2{
+        margin-top: 100px;
+      }
+      #category-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .category {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .sub-category {
+        margin: 30px;
+        padding: 10px;
+        width: 200px;
+        height: 150px;
+        border-radius: 8px;
+        display: inline-block;
+      }
+      .sub-category img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20%;
+      }
+      #container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    </style>
+  </head>
+  <body >
+    <header> 
+      <nav class="flex-div">
+      <div class="nav-left flex-div">
+        <a href="index.html"> <img src="img/로고.png" class="logo" /></a>
+          <a href="matchingaf.html"><span class="matchingaf">매칭후기</span></a>
+          <a href="community.html"><span class="community">커뮤니티</span></a>
+        </div>
+      </div>
+      <div class="nav-middle flex-div">
+        <div class="searchbox flex-div">
+          <img src="img/search.png">
+          <input type="text" placeholder="커뮤니티 검색">
+        </div>
+      </div>
+      <div class="nav-right flex-div">
+        <img src="img/login.png" alt="" id="login"/>
+      </div>
+    </nav>
+  </header>
+  <body class="body2" id="body2">
+    <div id="category-main">
+      <div class="category">
+        <div class="sub-category">
+          <a href=""><img src="../resources/album1.jpg" alt="카테고리 1-1"></a>
+        </div>
+        <div class="sub-category">
+          <a href="#"><img src="../resources/album2.jpg" alt="카테고리 1-2"></a>
+        </div>
+        <div class="sub-category">
+          <a href="#"><img src="../resources/album3.jpg" alt="카테고리 1-3"></a>
+        </div>
+        <div class="sub-category">
+          <a href="#"><img src="../resources/album4.jpg" alt="카테고리 1-4"></a>
+        </div>
+        <div class="sub-category">
+          <a href="#"><img src="../resources/album5.jpg" alt="카테고리 1-5"></a>
+        </div>
+      </div>
+      <div class="category">
+        <div class="sub-category">
+          <a href="#"><img src="../resources/album6.jpg" alt="카테고리 2-1"></a>
+        </div>
+        <div class="sub-category">
+          <a href="#"><img src="../resources/grid1.jpg" alt="카테고리 2-2"></a>
+        </div>
+        <div class="sub-category">
+          <a href="#"><img src="../resources/grid2.jpg" alt="카테고리 2-3"></a>
+        </div>
+        <div class="sub-category">
+          <a href="#"><img src="../resources/grid3.jpg" alt="카테고리 2-4"></a>
+        </div>
+        <div class="sub-category">
+          <a href="#"><img src="../resources/grid4.jpg" alt="카테고리 2-5"></a>
+        </div>
+      </div>
+      <div class="category">
+        <div class="sub-category">
+          <a href="#"><img src="../resources/grid5.jpg" alt="카테고리 3-1"></a>
+        </div>
+        <div class="sub-category">
+          <a href="#"><img src="../resources/grid6.jpg" alt="카테고리 3-2"></a>
+        </div>
+        <div class="sub-category">
+          <a href="#"><img src="../resources/grid7.jpg" alt="카테고리 3-3"></a>
+        </div>
+        <div class="sub-category">
+          <a href="#"><img src="../resources/grid8.jpg" alt="카테고리 3-4"></a>
+        </div>
+        <div class="sub-category">
+          <a href="#"><img src="../resources/grid9.jpg" alt="카테고리 3-5"></a>
+        </div>
+    </div>
+    <div class="category">
+      <div class="sub-category">
+        <a href="#"><img src="../resources/spy1.jpg" alt="카테고리 4-1"></a>
+      </div>
+      <div class="sub-category">
+        <a href="#"><img src="../resources/spy3.jpg" alt="카테고리 4-2"></a>
+      </div>
+      <div class="sub-category">
+        <a href="#"><img src="../resources/spy2.jpg" alt="카테고리 4-3"></a>
+      </div>
+      <div class="sub-category">
+        <a href="#"><img src="../resources/favicon.ico" alt="카테고리 4-4"></a>
+      </div>
+      <div class="sub-category">
+        <a href="#"><img src="../resources/background.jpg" alt="카테고리 4-5"></a>
+      </div>
+  </body>
+  </body>
+</html>
