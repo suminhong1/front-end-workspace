@@ -1,216 +1,214 @@
 body {
-    height: 100vh;
-    margin-left: 100px;
-    margin-right: 100px;
-
+  height: 100vh;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
-.top h1{
-    white-space: nowrap;
+.top h1 {
+  white-space: nowrap;
 }
 
 .choice {
-    margin-right: 10px;
-    margin-bottom: 20px;
-    text-align: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .category-choice {
-    display: flex;
+  display: flex;
 }
 
 .choice img {
-    width: 50px;
-    height: 50px;
-    display: block;
-    margin-bottom: 5px;
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .choice a {
-    text-decoration: none;
-    color: black;
-    font-size: 10px;
-    white-space: nowrap;
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
+  white-space: nowrap;
 }
 
 .detail {
-    display: flex;
-    font-size: 13px;
-    font-weight: bold;
+  display: flex;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .update {
-    border-radius: 20px;
-    padding: 10px;
-    background-color: black;
-    color: white;
-    width: 100px;
-    height: 40px;
-    margin-right: 10px;
-    cursor: pointer;
-    white-space: nowrap;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .detail #select {
-    width: 100px;
-    height: 40px;
-    margin-right: 5px;
-    border-radius: 5px;
+  width: 100px;
+  height: 40px;
+  margin-right: 5px;
+  border-radius: 5px;
 }
 
 .button-board {
-    border: solid 1px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    border-radius: 5px;
+  border: solid 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-radius: 5px;
 }
 
 .button {
-    flex: 1;
-    text-align: center;
-    position: relative;
-    height: 36px;
+  flex: 1;
+  text-align: center;
+  position: relative;
+  height: 36px;
 }
 
 .button img {
-    width: auto;
-    max-width: 40px;
-    height: 36px;
-    cursor: pointer;
-    transition: filter 0.2s;
+  width: auto;
+  max-width: 40px;
+  height: 36px;
+  cursor: pointer;
+  transition: filter 0.2s;
 }
 
 .button img:hover {
-    filter: brightness(70%);
+  filter: brightness(70%);
 }
 
 /* 각 버튼 사이에 보더를 추가하여 나눔 */
 .button:not(:last-child) {
-    border-right: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
 .write {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid;
-    border-radius: 5px;
-    text-align: center;
-    width: 120px;
-    height: 40px;
-    border-style: none;
-    background-color: rgb(32, 135, 252);
-    float: right;
-    margin-left: 250px;
-    white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 5px;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  border-style: none;
+  background-color: rgb(32, 135, 252);
+  float: right;
+  margin-left: 250px;
+  white-space: nowrap;
 }
 
 .write #write-submit {
-    text-decoration: none;
-    color: white;
-    white-space: nowrap;
-    float: right;
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+  float: right;
 }
 
 /* post-main */
 .post-main {
-    margin: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3개의 열을 생성합니다. */
-    gap: 7px; /* 열과 행 사이의 간격을 조절합니다. */
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3개의 열을 생성합니다. */
+  gap: 7px; /* 열과 행 사이의 간격을 조절합니다. */
 }
 
 .post-board {
-    border: 1px solid #343eff;
-    border-radius: 5px;
-    padding: 10px;
+  border: 1px solid #343eff;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .post-head {
-    display: flex;
-    margin-left: 10px;
+  display: flex;
+  margin-left: 10px;
 }
 
 #profile {
-    margin-top: 15px;
-    margin-left: 5px;
-    margin-right: 20px;
-    width: 50px;
-    height: 50px;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
 }
 
 .post-head #nickname {
-    text-decoration: none;
-    color: black;
-    font-size: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
 }
 
 .post-head #copy {
-    border: 1px solid;
-    width: 10px;
-    height: 10px;
-    background-color: #e4e3e3;
-    border-radius: 5px;
-}   
+  border: 1px solid;
+  width: 10px;
+  height: 10px;
+  background-color: #e4e3e3;
+  border-radius: 5px;
+}
 .post-head #time {
-    float: right;
-    margin-left: 40px;
-    font-size: 10px;
+  float: right;
+  margin-left: 40px;
+  font-size: 10px;
 }
 .post-head #pin {
-    width: 10px;
-    height: 10px;
-    margin-top: 5px;
-    margin-left: 10px;
-    cursor: pointer;
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
-.post-body{
-    margin: 10px;
+.post-body {
+  margin: 10px;
 }
 
 .post-body #text {
-    font-size: 13px;
-    margin-left: 5px;
-    color: #878686;
+  font-size: 13px;
+  margin-left: 5px;
+  color: #878686;
 }
 
 .post-foot {
-    margin: 10px;
+  margin: 10px;
 }
 .type-main {
-    display: flex;
-    font-weight: bold;
+  display: flex;
+  font-weight: bold;
 }
 
 .type-main #type {
-    border: 1px solid;
-    border-style: none;
-    background-color: #e4e3e3;
-    margin: 2px; 
-    border-radius: 5px;
-    text-align: center;
-    padding: 5px; /* 텍스트와 보더 사이의 간격을 조절합니다. */
-    font-size: 5px; /* 텍스트 크기를 조절합니다. */
-    width: 40px;
-    height: 10px;
+  border: 1px solid;
+  border-style: none;
+  background-color: #e4e3e3;
+  margin: 2px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px; /* 텍스트와 보더 사이의 간격을 조절합니다. */
+  font-size: 5px; /* 텍스트 크기를 조절합니다. */
+  width: 40px;
+  height: 10px;
 }
 
 .rating {
-    border: 1px solid;
-    border-radius: 5px;
-    padding: 7px;
-    font-size: 13px;
-    text-align: center;
-    border-style: none;
-    background-color: rgb(77, 254, 133);
-    margin-left: 40px;
-    width: 70px;
-    height: 30px;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 13px;
+  text-align: center;
+  border-style: none;
+  background-color: rgb(77, 254, 133);
+  margin-left: 40px;
+  width: 70px;
+  height: 30px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
 }
-
