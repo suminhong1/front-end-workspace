@@ -6,6 +6,8 @@ body {
 
 .top h1 {
   white-space: nowrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .choice {
@@ -34,8 +36,16 @@ body {
 
 .detail {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   font-size: 13px;
   font-weight: bold;
+  width: 80%;
+}
+
+.write-container {
+  margin-top: 10px; /* "글쓰기"와 다른 요소 사이의 간격을 조절합니다. */
 }
 
 .update {
@@ -96,21 +106,16 @@ body {
   align-items: center;
   border: 1px solid;
   border-radius: 5px;
-  text-align: center;
   width: 120px;
   height: 40px;
   border-style: none;
   background-color: rgb(32, 135, 252);
-  float: right;
-  margin-left: 250px;
   white-space: nowrap;
 }
 
 .write #write-submit {
   text-decoration: none;
   color: white;
-  white-space: nowrap;
-  float: right;
 }
 
 /* post-main */
@@ -119,6 +124,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3개의 열을 생성합니다. */
   gap: 7px; /* 열과 행 사이의 간격을 조절합니다. */
+  width: 60%;
 }
 
 .post-board {
