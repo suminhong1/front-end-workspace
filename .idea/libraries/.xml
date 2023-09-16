@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="시험">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/시험/UI 디자인.zip!/" />
+      <root url="jar://$PROJECT_DIR$/시험/UI 구현.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
