@@ -12,25 +12,26 @@
       crossorigin
       src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
     ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
     <div id="root"></div>
-
-    <script>
+    <script type="text/babel">
       let counter = 0;
       const setCount = () => {
         counter = counter + 1;
-        // console.log(counter);
-        const root = document.getElementById("root");
-        const h1 = React.createElement("h1", null, `Total clicks : ${counter}`);
-        const button = React.createElement(
-          "button",
-          { onClick: setCount },
-          "Click"
-        );
-        const container = React.createElement("div", null, h1, button);
-        ReactDOM.render(container, root);
+        console.log(counter);
+        ReactDOM.render(<Container />, root);
       };
+      const Container = () => {
+        return (
+          <div>
+            <h1>Total clicks: {counter}</h1>
+            <button onClick={setCount}>Click!</button>
+          </div>
+        );
+      };
+      ReactDOM.render(<Container />, root);
     </script>
   </body>
 </html>

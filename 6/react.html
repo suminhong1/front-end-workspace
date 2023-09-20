@@ -15,12 +15,11 @@
   </head>
   <body>
     <div id="root"></div>
-
     <script>
       let counter = 0;
       const setCount = () => {
         counter = counter + 1;
-        // console.log(counter);
+        console.log(counter);
         const root = document.getElementById("root");
         const h1 = React.createElement("h1", null, `Total clicks : ${counter}`);
         const button = React.createElement(
@@ -31,6 +30,15 @@
         const container = React.createElement("div", null, h1, button);
         ReactDOM.render(container, root);
       };
+      const root = document.getElementById("root");
+      const h1 = React.createElement("h1", null, `Total clicks : ${counter}`);
+      const button = React.createElement(
+        "button",
+        { onClick: setCount },
+        "Click"
+      );
+      const container = React.createElement("div", null, h1, button);
+      ReactDOM.render(container, root);
     </script>
   </body>
 </html>
