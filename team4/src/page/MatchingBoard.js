@@ -1,10 +1,9 @@
 import React from "react";
-import "./MatchingBoard.css";
+import "../css/MatchingBoard.css";
 
 const MatchingBoard = () => {
   return (
     <>
-      <h1>매칭 찾기</h1>
       <div className="main-content">
         <nav>
           <a href="#" className="active">
@@ -531,7 +530,8 @@ const MatchingBoard = () => {
                 <p className="foot-tag-type">#직장인</p>
               </div>
               <div className="foot-place-detail">
-                <p>서울특별시</p> <p>강남구</p>
+                <p>서울특별시</p>
+                <p>강남구</p>
               </div>
             </div>
           </div>
