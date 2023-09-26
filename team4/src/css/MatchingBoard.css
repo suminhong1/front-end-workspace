@@ -29,7 +29,10 @@ a {
 }
 .main-content {
   margin-top: 30px;
-  margin-left: 120px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 30px;
+  padding: 20px;
 }
 nav {
   width: 1640px;
@@ -56,7 +59,7 @@ nav a:hover {
 
 section {
   width: 1000px;
-  padding-top: 56px;
+  padding-top: 30px;
   display: grid; /* 그리드 레이아웃 사용 */
   grid-template-columns: repeat(3, 1fr); /* 3개의 열을 생성 */
   gap: 10px; /* 각각의 .post-board 사이의 간격 설정 */
@@ -78,14 +81,15 @@ section {
 .board-header-time {
   float: right;
   margin-right: 10px;
-  margin-bottom: 10px;
   font-size: 11px;
   font-weight: 550;
   color: #8a8a8a;
 }
 .board-header-main {
   display: flex;
-  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .profile {
@@ -94,6 +98,21 @@ section {
   flex-direction: column; /*수직 정렬*/
 }
 
+.profileImg {
+  width: 70px;
+  height: 50px;
+}
+.profileLike {
+  width: 70px;
+  height: 10px;
+}
+.board-image {
+  float: right;
+}
+.board-image img {
+  height: 60px;
+  width: 70px;
+}
 .titleNickname {
   flex-direction: wrap;
   text-align: center;
@@ -111,28 +130,34 @@ section {
 .nickname {
   font-weight: 600;
   font-size: 13px;
-  margin-left: 15px;
-  margin-top: 10px;
+  margin: 20px;
   /* font-family: "NanumSquareRoundB"; */
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board-image-main {
+  float: right;
 }
 
 .board-image {
   display: flex;
   float: right;
   gap: 10px;
+  padding: 10px;
 }
 
 .write-board {
   padding: 30px;
   width: 90%;
-  margin-top: 10px;
 }
 
 .write {
   font-size: 15px;
   font-weight: 600;
   color: #757575;
+  line-height: 18px;
   /* font-family: "NanumSquareRoundL"; */
 }
 .comment-count {
