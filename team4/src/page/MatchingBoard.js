@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import "../css/MatchingBoard.css";
-import { getCategories } from "../api/video";
+// import { getCategories } from "../api/video";
 
 const MatchingBoard = () => {
-  const [categories, setCategories] = useState([]);
+  // const [categories, setCategories] = useState([]);
 
-  const categoryAPI = async () => {
-    const result = await getCategories();
-    setCategories(result.data);
-  };
-  useEffect(() => {
-    categoryAPI();
-  }, []);
+  // const categoryAPI = async () => {
+  //   const result = await getCategories();
+  //   setCategories(result.data);
+  // };
+  // useEffect(() => {
+  //   categoryAPI();
+  // }, []);
   return (
     <>
       <div className="main-content">
@@ -19,11 +19,11 @@ const MatchingBoard = () => {
           <a href="#" className="active">
             전체
           </a>
-          {categories.map((category) => (
+          {/* {categories.map((category) => (
             <a href={category.categoryCode} key={category.categoryCode}>
               {category.categoryName}
             </a>
-          ))}
+          ))} */}
         </nav>
         <section>
           <div className="board">
