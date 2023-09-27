@@ -1,0 +1,27 @@
+/* styles.css */
+.modal {
+  display: none;
+  position: fixed;
+  bottom: 0; /* 변경된 부분 */
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1; /* 모달을 다른 콘텐츠 위에 표시하기 위한 z-index 추가 */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  width: 60%;
+  box-shadow: 0px 0px 10px 2px #000000;
+  position: relative;
+  margin: 0 auto; /* 중앙 정렬을 위해 추가 */
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
