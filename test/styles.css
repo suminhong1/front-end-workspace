@@ -1,12 +1,15 @@
 /* styles.css */
+#openModalBtn {
+  z-index: 1;
+}
 .modal {
   display: none;
   position: fixed;
-  bottom: 0; /* 변경된 부분 */
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1; /* 모달을 다른 콘텐츠 위에 표시하기 위한 z-index 추가 */
+  height: 100%;
+  z-index: 10; /* 모달을 다른 콘텐츠 위에 표시하기 위한 z-index 추가 */
 }
 
 .modal-content {

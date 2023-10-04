@@ -1,0 +1,19 @@
+/* 5. UI는 다음 이미지와 같이 작성합니다. */
+ul {
+  list-style: none;
+  text-align: center;
+}
+ul li {
+  display: inline-block;
+  margin: 0 50px;
+}
+h1 {
+  text-align: center;
+}
+table {
+  margin: 0 auto;
+  text-align: center;
+}
+form {
+  text-align: center;
+}
