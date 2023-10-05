@@ -111,7 +111,7 @@ const App = () => {
   const [movies, setMovies] = useState([
     {
       id: 1,
-      title: "Movie 1",
+      title: "Movie1",
       genre: "Drama",
       releseDate: "2022-01-01",
     },

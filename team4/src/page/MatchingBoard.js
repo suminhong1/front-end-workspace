@@ -62,7 +62,7 @@ const DetailView = () => {
             작성 내용
             <a href="#" className="comment-count">
               <img src="" alt="comment" />
-              <div className="count">0</div>
+              <div className="count">0</div>  
             </a>
           </div>
         </div>

@@ -18,16 +18,12 @@
   src: url("../font/NanumSquareRoundR.ttf") format("truetype");
 } */
 
-* {
-  z-index: 1;
-}
-
-*,
+/* *,
 :after,
 :before {
   box-sizing: border-box;
   border: 0 solid;
-}
+} */
 div {
   display: block;
 }
