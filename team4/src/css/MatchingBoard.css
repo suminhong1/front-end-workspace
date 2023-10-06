@@ -225,6 +225,7 @@ a {
 /* 모달 스타일 */
 
 .modal-main {
+  z-index: 11;
 }
 
 .modal-overlay {
