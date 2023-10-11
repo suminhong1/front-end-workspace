@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./components/Layout";
 import MatchingBoard from "./page/MatchingBoard";
+import PostWrite from "./page/PostWrite";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -9,6 +11,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <MatchingBoard />,
+      },
+      {
+        path: "postwrite",
+        element: <PostWrite />,
       },
     ],
   },

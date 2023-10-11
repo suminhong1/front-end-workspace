@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import { CKEditor } from "@ckeditor/ckeditor5-react";
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import React from "react"; // React를 임포트
 
 const PostWrite = () => {
   return (
@@ -46,7 +44,8 @@ const PostWrite = () => {
           ></input>
         </div>
         <div className="button">
-          <button>등록</button>
+          <button type="submit">등록</button>{" "}
+          {/* 버튼 타입을 submit으로 변경 */}
         </div>
       </form>
     </>
