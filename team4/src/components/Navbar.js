@@ -2,6 +2,7 @@ import alarm from "../assets/alarm.gif";
 import { useState, useEffect } from "react";
 import "../css/Navbar.css";
 import { GrHomeRounded } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [bell, setBell] = useState([false]);
@@ -16,12 +17,12 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-menu">
-          <a href="/" className="matchingPost">
+          <Link to="/PostWrite" className="matchingPost">
             끼리모집
-          </a>
-          <a href="/" className="matchingSearch">
+          </Link>
+          <Link to="/MatchingBoard" className="matchingSearch">
             끼리찾기
-          </a>
+          </Link>
           <a href="/" className="review">
             끼리후기
           </a>
