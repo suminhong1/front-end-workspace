@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../css/MatchingBoard.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Test from "../components/test";
+import Date from "../components/Date";
 // import black from "../assets/black.gif";
 
 import axios from "axios";
@@ -203,7 +203,7 @@ const MatchingBoard = () => {
               <div onClick={toggleModal} className="board">
                 <div className="board-header">
                   <div className="board-header-time" key={po.postSEQ}>
-                    <Test postDate={po.postDate} />
+                    <Date postDate={po.postDate} />
                   </div>
                   <div className="titleNickname">
                     <div className="title" key={po.postSEQ}>

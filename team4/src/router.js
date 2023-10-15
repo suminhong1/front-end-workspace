@@ -4,7 +4,6 @@ import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import MatchingBoard from "./pages/MatchingBoard";
 import PostWrite from "./pages/PostWrite";
-import Test2 from "./pages/Test2";
 
 const router = createBrowserRouter([
   {
@@ -23,10 +22,6 @@ const router = createBrowserRouter([
       {
         path: "postwrite",
         element: <PostWrite />,
-      },
-      {
-        path: "test2",
-        element: <Test2 />,
       },
     ],
   },
