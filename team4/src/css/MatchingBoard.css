@@ -233,11 +233,11 @@ a {
 
 /* 모달 스타일 */
 
-.modal-main {
+.Matching-modal-main {
   z-index: 11;
 }
 
-.modal-overlay {
+.Matching-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -249,7 +249,7 @@ a {
   align-items: center;
 }
 
-.modal {
+.Matching-modal {
   background: white;
   width: 900px; /* 너비 조절 */
   height: 700px; /* 높이 조절 */
@@ -289,7 +289,7 @@ a {
   text-align: center;
 }
 
-.modal img {
+.Matching-modal img {
   max-width: 500px;
   max-height: 500px;
   display: block;
