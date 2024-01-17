@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #contextMenu {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      z-index: 1000;
+    }
+  </style>
+  <title>Left Click Context Menu Example</title>
+</head>
+<body>
+
+  <button id="leftClickButton">Left Click Me</button>
+
+  <script>
+    document.getElementById('leftClickButton').addEventListener('mousedown', function (event) {
+      // Check if the left mouse button is clicked (event.button === 0)
+      if (event.button === 0) {
+        // Show the context menu next to the button
+        var contextMenu = document.getElementById('contextMenu');
+        contextMenu.style.display = 'block';
+        contextMenu.style.left = event.clientX + 'px';
+        contextMenu.style.top = event.clientY + 'px';
+
+        // Close the context menu when clicking outside of it
+        document.addEventListener('mousedown', function closeContextMenu(e) {
+          if (!contextMenu.contains(e.target) && e.target.id !== 'leftClickButton') {
+            contextMenu.style.display = 'none';
+            document.removeEventListener('mousedown', closeContextMenu);
+          }
+        });
+      }
+    });
+  </script>
+
+  <div id="contextMenu">
+    <p onclick="executeAction('save')">Save</p>
+    <p onclick="executeAction('delete')">Delete</p>
+    <!-- Add more menu items as needed -->
+  </div>
+
+  <script>
+    function executeAction(action) {
+      // Add your custom functionality here based on the selected action
+      alert('Action: ' + action);
+    }
+  </script>
+
+</body>
+</html>
